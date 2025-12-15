@@ -1,8 +1,11 @@
 import Button from "./components/Button"
 import ErrorMessage from "./components/ErrorMessage";
 import Counter from "./components/Counter";
+import ProductList from "./components/ProductList";
+import Rating from "./components/Rating";
 import { FaSun } from "react-icons/fa";
 import { GiMoon } from "react-icons/gi";
+
 
 import { useState } from "react";
 
@@ -31,13 +34,15 @@ const App = () => {
   return (
 
     <div>
+
+      <Rating  value={1}/>
       <div className="icon">
 
         {
 
-          theme === 'light' ? 
-          <GiMoon onClick={() => setTheme('dark')} color="#333" size={30} cursor="pointer" /> : 
-          <FaSun onClick={() => setTheme('light')} color="gold" size={30} cursor="pointer" />
+          theme === 'light' ?
+            <GiMoon onClick={() => setTheme('dark')} color="#333" size={30} cursor="pointer" /> :
+            <FaSun onClick={() => setTheme('light')} color="gold" size={30} cursor="pointer" />
         }
 
 
@@ -78,6 +83,11 @@ const App = () => {
         <Counter />
 
 
+
+        <br />
+        <br />
+
+        <ProductList />
 
 
 

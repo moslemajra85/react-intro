@@ -1,4 +1,4 @@
-import React from 'react'
+import Rating from "./Rating"
 
 const Product = ({ product }) => {
     return (
@@ -11,6 +11,8 @@ const Product = ({ product }) => {
                 <h2>{product.price}</h2>
                 <p>{product.description}</p>
             </div>
+
+            <Rating value={product.rating} />
         </div>
     )
 }
